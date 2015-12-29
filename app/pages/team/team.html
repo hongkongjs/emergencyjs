@@ -1,0 +1,59 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <icon menu></icon>
+  </button>
+  <ion-title>Team</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="team">
+
+  <h3>Emergency JS Team</h3>
+
+<!-- Segment buttons at Top -->
+  <ion-segment [(ngModel)]="team">
+    <ion-segment-button value="grid">
+      Grid
+    </ion-segment-button>
+    <ion-segment-button value="list">
+      List
+    </ion-segment-button>
+  </ion-segment>
+
+<!-- Switcher section and what to show for each segment -->
+  <div [ngSwitch]="team">
+    <ion-list *ngSwitchWhen="'grid'">
+    <!-- Replace with Grid View and Repeat from Data -->
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Michael</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Jackson</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchWhen="'list'">
+    <!-- Replace with better looking list and Repeat from Data -->
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Ruby</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Casey</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>

@@ -1,6 +1,6 @@
 import {App, IonicApp, Platform} from 'ionic-framework/ionic';
 
-import {GettingStartedPage} from './pages/getting-started/getting-started';
+import {TeamPage} from './pages/team/team';
 import {ListPage} from './pages/list/list';
 import {GridPage} from './pages/grid/grid';
 
@@ -17,12 +17,12 @@ class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Team', component: GettingStartedPage },
+      { title: 'Team', component: TeamPage },
       { title: 'Questions', component: ListPage },
       { title: 'Account', component: GridPage },
     ];
 
-    this.rootPage = GettingStartedPage;
+    this.rootPage = TeamPage;
   }
 
   initializeApp() {

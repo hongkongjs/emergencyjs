@@ -2,11 +2,11 @@ import {Page, NavController} from 'ionic-framework/ionic';
 
 
 @Page({
-  templateUrl: 'build/pages/getting-started/getting-started.html'
+  templateUrl: 'build/pages/team/team.html'
 })
-export class GettingStartedPage {
+export class TeamPage {
   constructor(nav: NavController) {
-
+  	this.team = "grid";
   }
 
 }
