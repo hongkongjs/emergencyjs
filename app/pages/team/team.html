@@ -12,16 +12,18 @@
   <h3>Emergency JS Team</h3>
 
 <!-- Segment buttons at Top -->
-  <ion-segment [(ngModel)]="team">
-    <ion-segment-button value="grid">
+  <ion-segment>
+    <ion-segment-button [ngClass]="{'segment-activated': isGrid, disabled: isList}"
+    (click)="switch('grid')">
       Grid
     </ion-segment-button>
-    <ion-segment-button value="list">
+    <ion-segment-button [ngClass]="{'segment-activated': isList, disabled: isGrid}"
+    (click)="switch('list')">
       List
     </ion-segment-button>
   </ion-segment>
 
-<!-- Switcher section and what to show for each segment -->
+<!-- Switcher section and what to show below for each segment -->
   <div [ngSwitch]="team">
     <ion-list *ngSwitchWhen="'grid'">
     <!-- Replace with Grid View and Repeat from Data -->
