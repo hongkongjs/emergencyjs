@@ -6,39 +6,29 @@
 </ion-navbar>
 
 <ion-content>
+<!-- Placeholder thumbnail list stuff -->
   <ion-list>
     <ion-list-header>Today</ion-list-header>
-       <ion-item>
-          <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
-          </ion-thumbnail>
-          <h2>Eumir</h2>
-          <H3>Angular 2 question</H3>
-          <p>Please teach me how to properly...</p>
-        </ion-item>
 
-        <ion-item>
-          <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
-          </ion-thumbnail>
-          <h2>Eumir</h2>
-          <H3>Javascript question</H3>
-          <p>What's a good way to start up a...</p>
-        </ion-item>
+      <ion-item (click)="itemTapped('selectedItem')">
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Name 1</h2>
+        <H3>Angular 2 question</H3>
+        <p>Please teach me how to properly...</p>
+      </ion-item>
 
-  <!-- Old filler template, will delete soon, just for reference. -->
-  <!--     <button ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
-        <icon [name]="item.icon" item-left></icon>
-        {{item.title}}
-        <div class="item-note" item-right>
-          {{item.note}}
-        </div>
-      </button> -->
+      <ion-item (click)="itemTapped('selectedItem2')">
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Name 2</h2>
+        <H3>Javascript question</H3>
+        <p>What's a good way to start up a...</p>
+      </ion-item>
 
-  </ion-list>
+   </ion-list>
 
   <button fab fab-right><icon add></icon></button>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
