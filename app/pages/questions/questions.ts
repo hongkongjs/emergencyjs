@@ -11,11 +11,13 @@ export class QuestionsPage {
     this.modal = modal;
   }
 
+  //once clicked, opens up the new screen, take note of the QuestionsDetail
   itemTapped(item) {
-    this.nav.push(QuestionsDetail, { item: item })
+    this.nav.push(QuestionsDetail)
     console.log("switch screen");
   }
 
+  //opens the modal, placed here because we are still in the questions page
   openModal(item){
     this.modal.open(questionModal);
     console.log("Open Modal");
@@ -23,14 +25,13 @@ export class QuestionsPage {
 
 }
 
+
+//Modal code, the templateUrl directs to the modal template
 @Page({
   templateUrl: 'build/pages/questions/questionadd.html'
 })
 class questionModal{
 
-  constructor(modal: Modal) {
-    this.nav = nav;
-    this.modal = Modal;
+  constructor() {
   }
-  
 }

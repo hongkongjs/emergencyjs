@@ -1,3 +1,5 @@
+<!-- Modal template appears when you actually load up the modal -->
+
 <ion-navbar *navbar>
   <button menuToggle>
     <icon menu></icon>
@@ -7,6 +9,8 @@
 
 <ion-content>
 <h2>I am a modal!</h2>
+
+<!-- Closing the modal does not require calling a function in your code anymore -->
 <button (click)="close()">Close</button>
 
 </ion-content>
