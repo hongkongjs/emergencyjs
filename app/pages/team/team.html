@@ -11,50 +11,60 @@
 
   <h3>Emergency JS Team</h3>
 
-<!-- Segment buttons at Top -->
-  <ion-segment>
-    <ion-segment-button [ngClass]="{'segment-activated': isGrid, disabled: isList}"
-    (click)="switch('grid')">
-      Grid
-    </ion-segment-button>
-    <ion-segment-button [ngClass]="{'segment-activated': isList, disabled: isGrid}"
-    (click)="switch('list')">
-      List
-    </ion-segment-button>
-  </ion-segment>
+  <div padding>
+    <ion-segment [(ngModel)]="team">
+      <ion-segment-button value="grid">
+        Grid View
+      </ion-segment-button>
+      <ion-segment-button value="list">
+        List View
+      </ion-segment-button>
+    </ion-segment>
+  </div>
 
-<!-- Switcher section and what to show below for each segment -->
   <div [ngSwitch]="team">
     <ion-list *ngSwitchWhen="'grid'">
-    <!-- Replace with Grid View and Repeat from Data -->
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="http://placehold.it/150x150">
-        </ion-thumbnail>
-        <h2>Michael</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="http://placehold.it/150x150">
-        </ion-thumbnail>
-        <h2>Jackson</h2>
-      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-thumbnail item-left>
+            <img src="http://placehold.it/150x150">
+          </ion-thumbnail>
+          <h4>Ruby</h4>
+        </ion-col>
+        <ion-col>
+          <ion-thumbnail item-left>
+            <img src="http://placehold.it/150x150">
+          </ion-thumbnail>
+          <h4>Casey</h4>
+        </ion-col>
+        <ion-col>
+          <ion-thumbnail item-left>
+            <img src="http://placehold.it/150x150">
+          </ion-thumbnail>
+          <h4>Murray</h4>
+        </ion-col>
+      </ion-row>
     </ion-list>
 
     <ion-list *ngSwitchWhen="'list'">
-    <!-- Replace with better looking list and Repeat from Data -->
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="http://placehold.it/150x150">
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="http://placehold.it/150x150">
-        </ion-thumbnail>
-        <h2>Casey</h2>
-      </ion-item>
+        <ion-item>
+          <ion-thumbnail item-left>
+            <img src="http://placehold.it/150x150">
+          </ion-thumbnail>
+          <h2>Ruby</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-left>
+            <img src="http://placehold.it/150x150">
+          </ion-thumbnail>
+          <h2>Casey</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-left>
+            <img src="http://placehold.it/150x150">
+          </ion-thumbnail>
+          <h2>Murray</h2>
+        </ion-item>
     </ion-list>
   </div>
 
