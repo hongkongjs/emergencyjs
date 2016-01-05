@@ -2,9 +2,9 @@ import {IonicApp, Page, NavController, NavParams} from 'ionic-framework/ionic';
 
 
 @Page({
-  templateUrl: 'build/pages/list/list.html'
+  templateUrl: 'build/pages/questions/questions.html'
 })
-export class ListPage {
+export class QuestionsPage {
   constructor(app: IonicApp, nav: NavController, navParams: NavParams) {
     this.nav = nav;
 
@@ -25,7 +25,7 @@ export class ListPage {
   }
 
   itemTapped(event, item) {
-    this.nav.push(ListPage, {
+    this.nav.push(QuestionsPage, {
       item: item
     })
   }
