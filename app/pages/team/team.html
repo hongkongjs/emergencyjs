@@ -25,23 +25,11 @@
   <div [ngSwitch]="team">
     <ion-list *ngSwitchWhen="'grid'">
       <ion-row>
-        <ion-col>
+        <ion-col *ngFor="#member of team">
           <ion-thumbnail item-left>
             <img src="http://placehold.it/150x150">
           </ion-thumbnail>
-          <h4>Ruby</h4>
-        </ion-col>
-        <ion-col>
-          <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
-          </ion-thumbnail>
-          <h4>Casey</h4>
-        </ion-col>
-        <ion-col>
-          <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
-          </ion-thumbnail>
-          <h4>Murray</h4>
+          <h4>{{member.name}}</h4>
         </ion-col>
       </ion-row>
     </ion-list>
