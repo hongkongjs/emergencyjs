@@ -1,0 +1,35 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <icon menu></icon>
+  </button>
+  <ion-title>Questions</ion-title>
+</ion-navbar>
+
+<ion-content>
+<!-- Placeholder thumbnail list stuff -->
+  <ion-list>
+    <ion-list-header>Today</ion-list-header>
+
+      <ion-item (click)="itemTapped('selectedItem')">
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Name 1</h2>
+        <H3>Angular 2 question</H3>
+        <p>Please teach me how to properly...</p>
+      </ion-item>
+
+      <ion-item (click)="itemTapped('selectedItem2')">
+        <ion-thumbnail item-left>
+          <img src="http://placehold.it/150x150">
+        </ion-thumbnail>
+        <h2>Name 2</h2>
+        <H3>Javascript question</H3>
+        <p>What's a good way to start up a...</p>
+      </ion-item>
+
+   </ion-list>
+
+   <!-- Opens modal, the openModal is a function -->
+  <button fab fab-right (click)="openModal()"><icon add></icon></button>
+</ion-content>
