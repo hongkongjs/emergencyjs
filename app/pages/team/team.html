@@ -12,7 +12,7 @@
   <h3>Emergency JS Team</h3>
 
   <div padding>
-    <ion-segment [(ngModel)]="team">
+    <ion-segment [(ngModel)]="teamx">
       <ion-segment-button value="grid">
         Grid View
       </ion-segment-button>
@@ -35,23 +35,11 @@
     </ion-list>
 
     <ion-list *ngSwitchWhen="'list'">
-        <ion-item>
+        <ion-item *ngFor="#member of team">
           <ion-thumbnail item-left>
             <img src="http://placehold.it/150x150">
           </ion-thumbnail>
-          <h2>Ruby</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
-          </ion-thumbnail>
-          <h2>Casey</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
-          </ion-thumbnail>
-          <h2>Murray</h2>
+          <h2>{{member.name}}</h2>
         </ion-item>
     </ion-list>
   </div>
