@@ -22,14 +22,15 @@
     </ion-segment>
   </div>
 
+
   <div [ngSwitch]="teamx">
     <ion-list *ngSwitchWhen="'grid'">
-      <ion-row>
-        <ion-col *ngFor="#member of team">
+      <ion-row class="flex-row" >
+        <ion-col class="flex-row-col" *ngFor="#member of team">
           <ion-thumbnail item-left>
-            <img src="http://placehold.it/150x150">
+            <img src="http://placehold.it/200x200">
           </ion-thumbnail>
-          <h4>{{member.name}}</h4>
+          <h5>{{member.name}}</h5>
         </ion-col>
       </ion-row>
     </ion-list>
