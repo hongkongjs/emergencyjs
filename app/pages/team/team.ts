@@ -12,7 +12,7 @@ export class TeamPage implements OnInit {
   public team: Member[];
   
   constructor(nav: NavController, private _teamService: TeamService) {
-	this.team = 'grid';
+	this.teamx = 'grid';
   }
 
   getTeam() {
