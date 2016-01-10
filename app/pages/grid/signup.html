@@ -1,0 +1,35 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Sign Up</ion-title>
+</ion-navbar>
+
+<ion-content class="grid">
+  <ion-list>
+    <ion-input floating-label>
+      <ion-label>Username</ion-label>
+      <input type="text">
+    </ion-input>
+    <ion-input floating-label>
+      <ion-label>First Name</ion-label>
+      <input type="text">
+    </ion-input>
+    <ion-input floating-label>
+      <ion-label>Last Name</ion-label>
+      <input type="text">
+    </ion-input>
+    <ion-input floating-label>
+      <ion-label>Email</ion-label>
+      <input type="email">
+    </ion-input>
+    <ion-input floating-label>
+      <ion-label>Password</ion-label>
+      <input type="password">
+    </ion-input>
+    <button full [disabled]="disabled">Sign Up</button>
+  </ion-list>
+</ion-content>
+<ion-footer-bar class="footer toolbar-title" (click)="gotoLogin()">
+  <h1 class="title">Already have an account ?</h1>
+</ion-footer-bar>

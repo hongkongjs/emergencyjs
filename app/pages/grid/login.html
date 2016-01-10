@@ -1,0 +1,22 @@
+<ion-header-bar class="header toolbar-title">
+  <h1 class="title">Log In</h1>
+</ion-header-bar>
+
+
+<ion-content class="grid">
+  <ion-list>
+    <ion-input floating-label>
+      <ion-label>Username</ion-label>
+      <input type="text">
+    </ion-input>
+    <ion-input floating-label>
+      <ion-label>Password</ion-label>
+      <input type="password">
+    </ion-input>
+    <button full [disabled]="disabled">Log In</button>
+    <button full outline>Forgot Password?</button>
+  </ion-list>
+</ion-content>
+<ion-footer-bar class="footer toolbar-title">
+  <h1 class="title">Don't have an account?</h1>
+</ion-footer-bar>

@@ -3,6 +3,8 @@ import {App, IonicApp, Platform} from 'ionic-framework/ionic';
 import {TeamPage} from './pages/team/team';
 import {ListPage} from './pages/list/list';
 import {GridPage} from './pages/grid/grid';
+import {SignUpPage} from './pages/grid/signup';
+import {LoginPage} from './pages/grid/login';
 
 
 @App({
@@ -19,7 +21,7 @@ class MyApp {
     this.pages = [
       { title: 'Team', component: TeamPage },
       { title: 'Questions', component: ListPage },
-      { title: 'Account', component: GridPage },
+      { title: 'Account', component: SignUpPage },
     ];
 
     this.rootPage = TeamPage;
