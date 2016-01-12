@@ -5,6 +5,7 @@ import {ListPage} from './pages/list/list';
 import {GridPage} from './pages/grid/grid';
 import {SignUpPage} from './pages/grid/signup';
 import {LoginPage} from './pages/grid/login';
+import {ResetPage} from './pages/grid/reset';
 
 
 @App({
