@@ -14,9 +14,9 @@
       <input type="password">
     </ion-input>
     <button full [disabled]="disabled">Log In</button>
-    <button full outline>Forgot Password?</button>
+    <button full outline (click)="gotoResetPassword()">Forgot Password?</button>
   </ion-list>
 </ion-content>
-<ion-footer-bar class="footer toolbar-title">
+<ion-footer-bar class="footer toolbar-title" (click)="gotoSignup()">
   <h1 class="title">Don't have an account?</h1>
 </ion-footer-bar>
