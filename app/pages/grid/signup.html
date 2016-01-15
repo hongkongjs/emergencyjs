@@ -9,23 +9,33 @@
   <ion-list>
     <ion-input floating-label>
       <ion-label>Username</ion-label>
-      <input type="text">
+      <input type="text" name='username' id='username'
+        [(ngModel)]='user.username' #username (keyup)="checkChanges(username)"
+        (blur)="checkChanges(username)">
     </ion-input>
     <ion-input floating-label>
       <ion-label>First Name</ion-label>
-      <input type="text">
+      <input type="text" [(ngModel)]='user.firstName' name='firstName' id='firstName'
+          #firstName (keyup)="checkChanges(firstName)"
+          (blur)="checkChanges(firstName)">
     </ion-input>
     <ion-input floating-label>
       <ion-label>Last Name</ion-label>
-      <input type="text">
+      <input type="text" [(ngModel)]='user.lastName' name='lastName' id='lastName'
+          #lastName (keyup)="checkChanges(lastName)"
+          (blur)="checkChanges(lastName)">
     </ion-input>
     <ion-input floating-label>
       <ion-label>Email</ion-label>
-      <input type="email">
+      <input type="email" [(ngModel)]='user.email' name='email' id='email'
+          #email (keyup)="checkChanges(email)"
+          (blur)="checkChanges(email)">
     </ion-input>
     <ion-input floating-label>
       <ion-label>Password</ion-label>
-      <input type="password">
+      <input type="password" [(ngModel)]='user.password' name='password' id='password'
+          #password (keyup)="checkChanges(password)"
+          (blur)="checkChanges(password)">
     </ion-input>
     <button full [disabled]="disabled">Sign Up</button>
   </ion-list>
