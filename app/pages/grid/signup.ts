@@ -30,7 +30,11 @@ export class SignUpPage {
 
 //    let validEmail =!!valid.test(newEmail);
     this.disabled = !(newUser && newfirstName && newlastName && newEmail && newPassword);
-    console.log('disabled = ' + this.disabled);
+    console.log('disabled = ' + this.disabled + ', username = '
+      + newUser + ', firstName = ' + newfirstName
+      + ', lastName = ' + newlastName
+      + ', email = ' + newfirstName
+      + 'password = ' + newPassword);
   }
 
   gotoLogin() {
@@ -38,7 +42,8 @@ export class SignUpPage {
     this.nav.push(LoginPage, {});
   }
 
-  getDiagnostics() {
-    return JSON.stringify(this.user);
+  signUp() {
+    console.log('Fire signUp method');
   }
+
 }

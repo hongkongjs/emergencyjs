@@ -6,8 +6,10 @@
   <ion-list>
     <ion-input floating-label>
       <ion-label>Email</ion-label>
-      <input type="email">
+      <input type="email" [(ngModel)]='user.email'
+        name='email' id='email' #email (keyup)='checkChanges(email)'
+          (blur)='checkChanges(email)'>
     </ion-input>
-    <button full [disabled]="disabled">Reset</button>
+    <button full [disabled]="disabled" (click)='resetPassword()'>Reset</button>
   </ion-list>
 </ion-content>

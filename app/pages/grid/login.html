@@ -7,13 +7,17 @@
   <ion-list>
     <ion-input floating-label>
       <ion-label>Username</ion-label>
-      <input type="text">
+      <input type="text" [(ngModel)]='user.username'
+        name='username' id='username' #username (keyup)='checkChanges(username)'
+        (blur)='checkChanges(username)'>
     </ion-input>
     <ion-input floating-label>
       <ion-label>Password</ion-label>
-      <input type="password">
+      <input type="password" [(ngModel)]='user.password'
+        name='password' id='password' #password (keyup)='checkChanges(password)'
+        (blur)='checkChanges(password)'>
     </ion-input>
-    <button full [disabled]="disabled">Log In</button>
+    <button full [disabled]="disabled" (click)='loginAccount()'>Log In</button>
     <button full outline (click)="gotoResetPassword()">Forgot Password?</button>
   </ion-list>
 </ion-content>

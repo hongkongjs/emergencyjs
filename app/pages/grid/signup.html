@@ -37,7 +37,7 @@
           #password (keyup)="checkChanges(password)"
           (blur)="checkChanges(password)">
     </ion-input>
-    <button full [disabled]="disabled">Sign Up</button>
+    <button full [disabled]="disabled" (click)='signUp()'>Sign Up</button>
   </ion-list>
 </ion-content>
 <ion-footer class="footer toolbar-title" (click)="gotoLogin()">
