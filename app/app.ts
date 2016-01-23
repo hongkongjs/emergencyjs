@@ -6,10 +6,13 @@ import {GridPage} from './pages/grid/grid';
 import {SignUpPage} from './pages/grid/signup';
 import {LoginPage} from './pages/grid/login';
 import {ResetPage} from './pages/grid/reset';
+import {Core} from './pages/grid/core';
 
+var Parse = require('parse');
 
 @App({
-  templateUrl: 'build/app.html'
+  templateUrl: 'build/app.html',
+  providers : [Core]
 })
 class MyApp {
   constructor(app: IonicApp, platform: Platform) {
@@ -47,6 +50,9 @@ class MyApp {
       // good for dark backgrounds and light text:
       // StatusBar.setStyle(StatusBar.LIGHT_CONTENT)
 
+        Parse.initialize("zZFN5jHVkxMpxOwsmqrkGy7uezIK9CRmaZdiF6y2",
+          "Isqf7Jcn1BakfrrzCMJI3KCMrYOg594FLFCgi5rc");
+        console.log('Parse initialize');
     });
   }
 

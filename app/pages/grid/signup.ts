@@ -1,7 +1,10 @@
 import {NavController} from 'ionic-framework/ionic';
 import {Page} from 'ionic-framework/ionic';
 import {LoginPage} from './login';
+import {TeamPage} from '../team/team';
+
 import {User} from './models';
+import {Core} from './core';
 
 @Page({
   templateUrl: 'build/pages/grid/signup.html'
@@ -10,13 +13,21 @@ export class SignUpPage {
 
   public disabled: boolean;
   public user: User;
+  private coreService : Core;
 
-  constructor(nav: NavController) {
+  constructor(nav: NavController, core : Core) {
     this.nav = nav;
     this.user = { 'username' : '', 'firstName': '', 'lastName' : '',
                   'email': '', 'password': ''};
     this.disabled = true;
+    this.coreService = core;
   }
+
+  // onPageWillEnter() {
+  //    if (this.coreService.isLogin()) {
+  //      return this.nav.push(TeamPage, {});
+  //    }
+  // }
 
   checkChanges(changeData: any) {
     console.log('name: ' + changeData.name + ', value: ' + changeData.value);
@@ -44,6 +55,7 @@ export class SignUpPage {
 
   signUp() {
     console.log('Fire signUp method');
+    this.coreService.userSignup(this.user, this.nav);
   }
 
 }

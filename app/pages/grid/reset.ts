@@ -1,5 +1,6 @@
-import {Page} from 'ionic-framework/ionic';
+import {Page, NavController} from 'ionic-framework/ionic';
 import {User} from './models';
+import {Core} from './core';
 
 @Page({
   templateUrl: 'build/pages/grid/reset.html'
@@ -8,11 +9,14 @@ export class ResetPage {
 
   public disabled : boolean;
   public user: User;
+  private coreService : Core;
 
-  constructor() {
+  constructor(nav: NavController, core: Core) {
+      this.nav =  nav;
       this.user = { 'username' : '', 'firstName': '', 'lastName' : '',
                   'email': '', 'password': ''};
       this.disabled = true;
+      this.coreService = core;
   }
 
   checkChanges(changeData: any) {
@@ -23,5 +27,6 @@ export class ResetPage {
 
   resetPassword() {
     console.log('Fire resetPassword method.');
+    this.coreService.userReset(this.user.email, this.nav);
   }
 }
